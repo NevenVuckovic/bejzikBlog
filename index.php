@@ -20,7 +20,9 @@
 
 <body>
 
-<header>
+    <?php include('header.php'); ?>
+
+<!-- <header>
     <div class="blog-masthead">
         <div class="container">
             <nav class="nav">
@@ -39,7 +41,7 @@
             <p class="lead blog-description">An example blog template built with Bootstrap.</p>
         </div>
     </div>
-</header>
+</header> -->
 
 <main role="main" class="container">
 
@@ -113,7 +115,9 @@
 
         </div><!-- /.blog-main -->
 
-        <aside class="col-sm-3 ml-sm-auto blog-sidebar">
+        <?php include('sidebar.php'); ?>
+
+        <!-- <aside class="col-sm-3 ml-sm-auto blog-sidebar">
             <div class="sidebar-module sidebar-module-inset">
                 <h4>About</h4>
                 <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
@@ -143,17 +147,19 @@
                     <li><a href="#">Facebook</a></li>
                 </ol>
             </div>
-        </aside><!-- /.blog-sidebar -->
+        </aside>/.blog-sidebar -->
 
     </div><!-- /.row -->
 
 </main><!-- /.container -->
 
-<footer class="blog-footer">
+<?php include('footer.php'); ?>
+
+<!-- <footer class="blog-footer">
     <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
     <p>
         <a href="#">Back to top</a>
     </p>
-</footer>
+</footer> -->
 </body>
 </html>
