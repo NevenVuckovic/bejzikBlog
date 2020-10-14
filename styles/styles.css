@@ -2,20 +2,40 @@ html  {
     font-size: 14px
 }
 
-/* .blog-post-title {} */
+/* font promenjen */
 
 .blog-masthead {
     background-color: #b34848
 }
 
+/* pozadina navbara promenjena */
+
 .blog-post-title:hover {
-    text-underline-position: below
+    text-decoration: underline !important;
+    color: #b34848 !important;
+    text-decoration-color:  #b34848 !important
 }
 
-.blog-header {
+/* .blog-header {
     color: #b34848
-}
+} */
 
 .blog-post-title {
-    color: #b34848
+    color: #b34848 !important
 }
+
+    /* promenjena boja naslova postova */
+
+h1, h2, h3, h4, h5, h6 {
+    color: #b34848 !important}      
+
+    /* promenjena boja svih naslova */
+
+    .naslov:link,
+    .naslov:visited,
+    .naslov:hover,
+    .naslov:active {
+  text-decoration:  #b34848; 
+  color:  #b34848;
+}
+/* naslovi-linkovi ostaju iste boje */
