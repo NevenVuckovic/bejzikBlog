@@ -11,7 +11,7 @@ foreach ($posts as $post) {
 ?>
 <article class="blog-post">
     <header>
-        <h1 class="blog-post-title"><a class="naslov" href="#"<?php echo($post['id']) ?>><?php echo($post['title']) ?></a></h1>
+        <h1 class="blog-post-title"><a class="naslov" href="single-post.php?id=<?php echo($post['id']) ?>"><?php echo($post['title']) ?></a></h1>
         <div> <?php echo($post['created_at']) ?> by <?php echo($post['author']) ?></div>
     </header>
         <div>
