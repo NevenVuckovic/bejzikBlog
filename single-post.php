@@ -73,7 +73,7 @@ foreach ($posts as $post) {
         <?php include('sidebar.php');?>
         
     </div>
-
+    <?php include('footer.php'); ?>
 
             <nav class="blog-pagination">
                 <a class="btn btn-outline-primary" href="#">Older</a>

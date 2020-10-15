@@ -11,3 +11,15 @@
 --     ('Drugi Naslov', 'loremipsumloremispum', 'Ljore I.'),
 --     ('treci Naslov', 'loremipsumloremispumloremipsum', 'Lj.I.')
 
+-- create table comments (
+--     id int primary key auto_increment,
+--     author varchar(20) not null default 'anon',
+--     text varchar(500) not null,
+--     post_id int not null,
+--     FOREIGN KEY(post_id) REFERENCES posts(id)
+-- )
+
+-- insert into comments (author, text, post_id) values 
+--     ('bukovski', 'lorem ipsumem', 2),
+--     ('kinaski', 'ipsumem lorem', 2),
+--     ('andric', 'drina', 1)
