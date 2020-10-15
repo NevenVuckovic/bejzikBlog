@@ -1,5 +1,7 @@
 <?php
 
+include('konekcija.php');
+
         $sqlComments = "SELECT text, author, comments.id FROM comments 
         INNER JOIN posts ON comments.post_id = posts.id WHERE posts.id = {$_GET["id"]}";
  

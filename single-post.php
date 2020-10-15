@@ -1,4 +1,6 @@
-
+<?php
+    include('konekcija.php');
+?>
 
 <?php
     error_reporting(E_ALL);
