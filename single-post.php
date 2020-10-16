@@ -45,6 +45,15 @@ $posts = $statement->fetch();
         <div>
         <p> <?php echo($posts['body']) ?></p>
         </div>
+
+        <form action="submit">
+            <input id="author" type="text" placeholder="Autor">
+            <br>
+            <input id="comment" type="text" placeholder="Komentar">
+            <br>
+            <button id="submitbtn">Objavi</button>
+        </form>
+
        <?php include('comments.php'); ?>
 </article>
 
