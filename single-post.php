@@ -1,30 +1,11 @@
 <?php
     include('konekcija.php');
-?>
-
-<?php
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
-
-    $servername = "127.0.0.1";
-    $username = "root";
-    $password = "vivify";
-    $dbname = "blog";
-
-    try {
-        $connection = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-    catch(PDOException $e)
-    {
-        echo $e->getMessage();
-    }
 
 $sql1 = "SELECT * FROM posts WHERE id = {$_GET['id']}";
 $statement = $connection->prepare($sql1);
 $statement->execute();
 $statement->setFetchMode(PDO::FETCH_ASSOC);
-$posts = $statement->fetchAll();
+$posts = $statement->fetch();
 ?>
 
 
@@ -55,22 +36,19 @@ $posts = $statement->fetchAll();
 <main role="main" class="container">
     <div class="row">
         <div class="col-sm-8 blog-main">
-        <?php
-foreach ($posts as $post) {
-?>
+        
 <article class="blog-post">
     <header>
-        <h1 class="blog-post-title"><a class="naslov" href="single-post.php?id=<?php echo($post['id']) ?>"><?php echo($post['title']) ?></a></h1>
-        <div> <?php echo($post['created_at']) ?> by <?php echo($post['author']) ?></div>
+        <h1 class="blog-post-title"><a class="naslov" href="single-post.php?id=<?php echo($posts['id']) ?>"><?php echo($posts['title']) ?></a></h1>
+        <div> <?php echo($posts['created_at']) ?> by <?php echo($posts['author']) ?></div>
     </header>
         <div>
-        <p> <?php echo($post['body']) ?></p>
+        <p> <?php echo($posts['body']) ?></p>
         </div>
+       <?php include('comments.php'); ?>
 </article>
 
-<?php
- }
-?>
+
         </div>
         <?php include('sidebar.php');?>
         

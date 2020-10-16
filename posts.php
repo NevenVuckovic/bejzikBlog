@@ -1,6 +1,4 @@
-<?php
-    include('konekcija.php');
-?>
+
 <?php
 $sql1 = "SELECT * FROM posts ORDER BY created_at DESC";
 $statement = $connection->prepare($sql1);
